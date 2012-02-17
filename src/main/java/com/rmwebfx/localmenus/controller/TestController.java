@@ -11,6 +11,6 @@ public class TestController implements Controller {
     public ModelAndView handleRequest(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws Exception {
 		
-		return new ModelAndView("jsp/helloworld.jsp");
+		return new ModelAndView("helloworld");
 	}
 }
