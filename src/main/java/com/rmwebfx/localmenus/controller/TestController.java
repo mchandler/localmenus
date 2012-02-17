@@ -1,16 +1,16 @@
 package com.rmwebfx.localmenus.controller;
  
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
  
-@Controller
-public class TestController {
+public class TestController implements Controller {
  
-    @RequestMapping("/hello")
-    public ModelAndView helloWorld() {
- 
-        String message = "Hello World, Spring 3.0!";
-        return new ModelAndView("hello", "message", message);
-    }
+    public ModelAndView handleRequest(HttpServletRequest arg0,
+			HttpServletResponse arg1) throws Exception {
+		
+		return new ModelAndView("jsp/helloworld.jsp");
+	}
 }
